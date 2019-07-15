@@ -1,0 +1,74 @@
+@mixin font() //預設字形
+  font-family: 'Noto Sans TC', sans-serif,'PingFang SC','Microsoft JhengHei'
+  // font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
+
+@mixin size($w,$h:$w) //設定寬高
+  width: $w
+  height: $h
+
+@mixin shadow($r:10px,$c:rgba(#000,.2),$x:0px,$y:0px) //快定陰影
+  box-shadow: $x $y $r $c
+
+@mixin flex($d:rows,$x:center,$y:center) //轉flex
+  display: flex
+  justify-content: $x
+  align-items: $y
+  flex-direction: $d
+
+@mixin bg($z:cover,$p:center) //圖片常用項目
+  background-size: $z
+  background-position: $p
+  background-repeat: no-repeat
+
+@mixin rwd($rwd) //rwd斷點
+  @media only screen and (max-width: $rwd) 
+    @content
+
+@mixin before($c:'') //before
+  &:before
+    content: $c
+    @content
+
+@mixin after($c:'') //after
+  &:after
+    content: $c
+    @content
+
+@mixin hover($s:.5s) //hover
+  &:hover,&:focus
+    transition: $s
+    @content
+
+@mixin dark() //黑底白字
+  background-color: $dark
+  color: $light
+
+@mixin light() //白底黑字
+  background-color: $light
+  color: $dark
+
+@mixin por()
+  position: relative
+
+@mixin poa($t:0,$l:0,$b:none,$r:none)
+  position: absolute
+  top: $t
+  right: $r
+  bottom: $b
+  left: $l
+
+@mixin clearfix() //黑人問號
+  &:after 
+    content: ''
+    display: table
+    clear: both
+
+@mixin scrollBar() //滾動條樣式
+  &::-webkit-scrollbar-track-piece 
+    background: #d3dce6
+  &::-webkit-scrollbar 
+    width: 6px
+  &::-webkit-scrollbar-thumb 
+    background: #99a9bf
+    border-radius: 20px
+
