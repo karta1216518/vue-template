@@ -1,11 +1,11 @@
 <template>
   <div class="dashboard-container container">
     <div class="dashboard-text">name:123</div>
-    <ckeditor
+    <!-- <ckeditor
       :editor="editor"
       v-model="content"
       :config="editorConfig"
-    ></ckeditor>
+    ></ckeditor> -->
   </div>
 </template>
 
