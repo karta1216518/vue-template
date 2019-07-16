@@ -35,3 +35,23 @@
 .el-button,.el-input
   +font
   font-size: $fz
+
+//upload
+.el-upload-list__item,.el-upload--picture-card
+  width: 200px !important
+  height: 200px !important
+.el-upload--picture-card
+  line-height: 200px
+.el-upload-list__item
+  display: flex !important
+  align-items: center
+  justify-content: center
+  min-width: 200px
+  margin: 10px
+  &-thumbnail
+    +bg
+    width: auto !important
+
+.el-dialog
+  margin-bottom: 20vh 
+

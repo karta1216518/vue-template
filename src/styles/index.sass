@@ -1,0 +1,61 @@
+@import './common/index.sass'
+@import './element-ui.sass'
+@import './sidebar/sidebar.scss'
+
+
+//global
+html,#app 
+  height: 100%
+  box-sizing: border-box
+
+body 
+  height: 100%
+  +font
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+//通用
+.container
+  +size(100%)
+  max-width: 900px
+  min-height: calc(100vh - 120px)
+  margin: 0 auto
+  padding: 20px
+.pageHeader
+  display: flex
+  font-size: 1.5*$fz
+  font-weight: 600
+  height: 60px
+  .pageTitle,
+  .pageOption
+    +flex
+  .pageOption
+    margin-left: auto
+.dialog
+  +pof()
+  +flex
+  background-color: rgba(#000,.8)
+  z-index: -1000
+  opacity: 0
+  transition: opacity .4s
+  .dialogForm
+    +size(50vw,500px)
+    min-width: 700px
+    background: #FFF
+    border-radius: 8px
+    position: relative
+    padding-bottom: 40px
+    .dialogHeader
+      +flex(row,space-between)
+      padding: 20px 40px
+      .dialogTitle 
+        font-size: 1.5*$fz
+        font-weight: 600
+    .dialogFooter
+      +flex(row,flex-end)
+      +poa(none,none,0,0)
+      padding: 20px 40px 40px 40px
+  &.dialogShow
+    z-index: 2000
+    opacity: 1

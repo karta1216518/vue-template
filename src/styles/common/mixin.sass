@@ -6,7 +6,7 @@
   width: $w
   height: $h
 
-@mixin shadow($r:10px,$c:rgba(#000,.2),$x:0px,$y:0px) //快定陰影
+@mixin shadow($r:8px,$c:rgba(#000,.2),$x:0px,$y:0px) //快定陰影
   box-shadow: $x $y $r $c
 
 @mixin flex($d:rows,$x:center,$y:center) //轉flex
@@ -52,6 +52,13 @@
 
 @mixin poa($t:0,$l:0,$b:none,$r:none)
   position: absolute
+  top: $t
+  right: $r
+  bottom: $b
+  left: $l
+
+@mixin pof($t:0,$l:0,$b:0,$r:0)
+  position: fixed
   top: $t
   right: $r
   bottom: $b

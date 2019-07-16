@@ -156,11 +156,20 @@ button {
   background-color: transparent;
 }
 
-// input,
-// textarea,
-// a {
-//   font-family: 'Noto Sans TC', sans-serif;
-// }
+input,
+textarea,
+a {
+  font-family: 'Noto Sans TC', sans-serif, 'PingFang SC', 'Microsoft JhengHei';
+}
+
+input,
+textarea {
+  font-size: 18px !important;
+}
+
+label {
+  font-weight: 600;
+}
 
 // input,
 // textarea {

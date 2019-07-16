@@ -7,7 +7,7 @@ import locale from 'element-ui/lib/locale/lang/zh-TW' // lang i18n
 import 'element-ui/lib/theme-chalk/index.css'
 import CKEditor from '@ckeditor/ckeditor5-vue'
 
-import '@/styles/index.scss' // global css
+import '@/styles/index.sass' // global css
 
 import App from './App'
 import store from './store'

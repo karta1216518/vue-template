@@ -105,13 +105,13 @@ export const constantRoutes = [
         path: 'vote',
         name: 'vote',
         component: () => import('@/views/app/vote'),
-        meta: { title: 'vote', icon: 'dashboard' }
+        meta: { title: 'vote', icon: 'web' }
       },
       {
         path: 'vote2',
         name: 'vote3',
         component: () => import('@/views/app/vote'),
-        meta: { title: 'vote', icon: 'dashboard' }
+        meta: { title: 'vote', icon: 'web' }
       }
     ]
   },
